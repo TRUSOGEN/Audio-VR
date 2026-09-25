@@ -1,0 +1,125 @@
+{
+  "status": "digital_signal_audit_only",
+  "files": [
+    {
+      "file": "C0_current_contour/T01_cruise_entry.wav",
+      "sha256": "f71ca54e29d8b37bccb78028c25883726baf53714dd24a006c586f92f459f63f",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.39386,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C0_current_contour/T02_descent_begin.wav",
+      "sha256": "ee0a447c77d27bfa98fe0eb42c3297216ca608225ebdd663fa3c14af81435dcd",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.364288,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C0_current_contour/T03_landing_preparation.wav",
+      "sha256": "fde8e8ffe2e5b7e9662f28d5e2a8f29813a9d91955f46110fc5d5306d333edd0",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.358459,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C1_no_late_tick/T01_cruise_entry.wav",
+      "sha256": "f71ca54e29d8b37bccb78028c25883726baf53714dd24a006c586f92f459f63f",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.39386,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C1_no_late_tick/T02_descent_begin.wav",
+      "sha256": "ee0a447c77d27bfa98fe0eb42c3297216ca608225ebdd663fa3c14af81435dcd",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.364288,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C1_no_late_tick/T03_landing_preparation.wav",
+      "sha256": "865dae8e3e38d2010a0004d84ec427193f847fc195ddc53a6b2cad72bafa920d",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.358795,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C2_reduced_harmonic/T01_cruise_entry.wav",
+      "sha256": "8d404645256e7d33acbb6aa12216c2e7d7d615d222490832f4be8dcb8e1f44a0",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.3591,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C2_reduced_harmonic/T02_descent_begin.wav",
+      "sha256": "28246edbcbba3492c4ab0fea28c4927688b22c9fce4481bb35cba389a772149b",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.332123,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C2_reduced_harmonic/T03_landing_preparation.wav",
+      "sha256": "4d47f98430dae39dafd4b570e3c26e0c7f3e461bc29c2327996d4f2cba02e26e",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.326538,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "C3_smoother_envelope/T01_cruise_entry.wav",
+      "sha256": "a8f52087a22bb2d335d354be9ce2cdc327aa314d8285d01f4873e048d5f64ad5",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.448883,
+      "rms_digital_amplitude": 0.149984
+    },
+    {
+      "file": "C3_smoother_envelope/T02_descent_begin.wav",
+      "sha256": "f5bc3dc8fe0362b6fac91e3bec2dcec396754af66ce52ee73b0ca41b155b43ad",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.401794,
+      "rms_digital_amplitude": 0.149984
+    },
+    {
+      "file": "C3_smoother_envelope/T03_landing_preparation.wav",
+      "sha256": "81e691efeed30c374b7306957a755149a8be86f5cdc971bb8982b1738119a9ac",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.405304,
+      "rms_digital_amplitude": 0.149984
+    }
+  ]
+}

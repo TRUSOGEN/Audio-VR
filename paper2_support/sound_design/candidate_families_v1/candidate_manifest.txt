@@ -1,0 +1,7 @@
+sample_rate=44100
+duration_seconds=1.35
+format=mono_pcm16
+target_digital_rms=0.15
+maximum_digital_peak=0.75
+families=contour,interval,rhythm,brightness
+targets=T01_cruise_entry,T02_descent_begin,T03_landing_preparation

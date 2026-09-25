@@ -1,0 +1,69 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Paper #2 · V3 / V4 speech candidate</title><style>
+    body{font:16px/1.65 system-ui,sans-serif;max-width:1100px;margin:40px auto;padding:0 24px;color:#193840;background:#f6f8f7}
+    h1{font-size:30px;line-height:1.3}h2{font-size:23px}h3{font-size:19px;margin-top:0}.status{background:#e7ede4;padding:4px 10px;border-radius:5px}
+    section{background:white;border:1px solid #d8e1de;border-radius:12px;padding:24px;margin:30px 0}.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    article{background:#f2f6f5;padding:20px;border-radius:8px}.text{font-weight:600;min-height:54px}audio{width:100%;margin:12px 0}
+    dl{display:grid;grid-template-columns:1fr 1fr;gap:7px;font-size:14px}dd{margin:0;text-align:right}dt{color:#526c70}a{color:#1c6771}details{margin-top:16px}summary{cursor:pointer}
+    code{display:block;font-size:12px;overflow-wrap:anywhere}img{width:100%;margin-top:14px}.note{border-left:3px solid #748a76;padding-left:16px}
+    @media(max-width:750px){.cards{grid-template-columns:1fr}body{margin:24px auto;padding:0 16px}section{padding:16px}.text{min-height:0}}</style>
+    <header><span class="status">工程候选 · 主观试听待做</span><h1>语音预告与播报节奏：V3 / V4 对照</h1>
+    <p>保持同一 ElevenLabs voice identity 与 Eleven Multilingual v2；V4 的 speed UI 从 1.00 调至 0.90，T01 改为未来式预告。原始 MP3 未裁剪、未归一化或变速。</p>
+    <p class="note">T01 同时改变文案和 speed 设置，不能把听感或时长差异只归因于语速。Provider 设置不保证实际词速恰好下降 10%；是否自然、清晰且符合常规机舱广播仍需人耳检查。</p>
+    <p><a href="README.md">设计与生产记录</a> · <a href="production_record.json">原始生成记录</a> · <a href="waveform_audit.json">数字审计</a> · <a href="waveform_audit.csv">CSV</a></p></header><section><h2>T01 · 同目标对照</h2><div class="cards"><article><h3>V3 · 旧版 reference</h3><p class="text">Flight update. Cruising altitude reached.</p>
+            <p>Provider UI speed: <strong>1.00</strong></p>
+            <audio controls preload="none" src="../elevenlabs_broadcast_v3/raw/T01_cruising_altitude_raw.mp3"></audio>
+            <dl><dt>解码时长</dt><dd>2.351 s</dd>
+            <dt>数字 RMS / peak</dt><dd>0.1013 / 0.4540</dd>
+            <dt>首 / 尾低能量区间</dt><dd>0.010 / 0.091 s</dd>
+            <dt>解码满幅样本数</dt><dd>0</dd></dl>
+            <a href="../elevenlabs_broadcast_v3/raw/T01_cruising_altitude_raw.mp3" download>下载原始 MP3</a>
+            <details><summary>SHA-256</summary><code>09cddda0a3555a7421c7e048144eefc412a2da47b97bcbffffe32ea356261e13</code></details></article><article><h3>V4 · 新候选</h3><p class="text">Flight update. We will enter cruise shortly.</p>
+            <p>Provider UI speed: <strong>0.90</strong></p>
+            <audio controls preload="none" src="raw/T01_cruise_entry_raw.mp3"></audio>
+            <dl><dt>解码时长</dt><dd>2.638 s</dd>
+            <dt>数字 RMS / peak</dt><dd>0.1236 / 0.5365</dd>
+            <dt>首 / 尾低能量区间</dt><dd>0.010 / 0.178 s</dd>
+            <dt>解码满幅样本数</dt><dd>0</dd></dl>
+            <a href="raw/T01_cruise_entry_raw.mp3" download>下载原始 MP3</a>
+            <details><summary>SHA-256</summary><code>55826f2aa42eb450f9ff3767c03883b7a2941583646057af326d67989308988b</code></details></article></div>
+        <details><summary>查看实际波形与能量包络</summary><a href="T01_waveform_comparison.png"><img loading="lazy" src="T01_waveform_comparison.png" alt="T01 V3/V4 decoded waveform comparison"></a></details></section><section><h2>T02 · 同目标对照</h2><div class="cards"><article><h3>V3 · 旧版 reference</h3><p class="text">Flight update. Descent will begin shortly.</p>
+            <p>Provider UI speed: <strong>1.00</strong></p>
+            <audio controls preload="none" src="../elevenlabs_broadcast_v3/raw/T02_descent_raw.mp3"></audio>
+            <dl><dt>解码时长</dt><dd>2.508 s</dd>
+            <dt>数字 RMS / peak</dt><dd>0.1077 / 0.4904</dd>
+            <dt>首 / 尾低能量区间</dt><dd>0.010 / 0.088 s</dd>
+            <dt>解码满幅样本数</dt><dd>0</dd></dl>
+            <a href="../elevenlabs_broadcast_v3/raw/T02_descent_raw.mp3" download>下载原始 MP3</a>
+            <details><summary>SHA-256</summary><code>faa43a45ea4d2137f8246e93fc4d1fc95f2aa5a38c557ebe336eeeb4adc583a2</code></details></article><article><h3>V4 · 新候选</h3><p class="text">Flight update. Descent will begin shortly.</p>
+            <p>Provider UI speed: <strong>0.90</strong></p>
+            <audio controls preload="none" src="raw/T02_descent_begin_raw.mp3"></audio>
+            <dl><dt>解码时长</dt><dd>2.926 s</dd>
+            <dt>数字 RMS / peak</dt><dd>0.1141 / 0.5096</dd>
+            <dt>首 / 尾低能量区间</dt><dd>0.010 / 0.236 s</dd>
+            <dt>解码满幅样本数</dt><dd>0</dd></dl>
+            <a href="raw/T02_descent_begin_raw.mp3" download>下载原始 MP3</a>
+            <details><summary>SHA-256</summary><code>7b355ff285e8023f9d67c1e9ea76e587525b0090e457c4bf8c5526ff3a486f2c</code></details></article></div>
+        <details><summary>查看实际波形与能量包络</summary><a href="T02_waveform_comparison.png"><img loading="lazy" src="T02_waveform_comparison.png" alt="T02 V3/V4 decoded waveform comparison"></a></details></section><section><h2>T03 · 同目标对照</h2><div class="cards"><article><h3>V3 · 旧版 reference</h3><p class="text">Flight update. Prepare for landing.</p>
+            <p>Provider UI speed: <strong>1.00</strong></p>
+            <audio controls preload="none" src="../elevenlabs_broadcast_v3/raw/T03_landing_raw.mp3"></audio>
+            <dl><dt>解码时长</dt><dd>2.116 s</dd>
+            <dt>数字 RMS / peak</dt><dd>0.1106 / 0.5524</dd>
+            <dt>首 / 尾低能量区间</dt><dd>0.010 / 0.106 s</dd>
+            <dt>解码满幅样本数</dt><dd>0</dd></dl>
+            <a href="../elevenlabs_broadcast_v3/raw/T03_landing_raw.mp3" download>下载原始 MP3</a>
+            <details><summary>SHA-256</summary><code>a8350a46455f1aca41bc5b6a59214ac7cde2ff129af381326d41bb99c1c9950a</code></details></article><article><h3>V4 · 新候选</h3><p class="text">Flight update. Prepare for landing.</p>
+            <p>Provider UI speed: <strong>0.90</strong></p>
+            <audio controls preload="none" src="raw/T03_landing_preparation_raw.mp3"></audio>
+            <dl><dt>解码时长</dt><dd>2.351 s</dd>
+            <dt>数字 RMS / peak</dt><dd>0.1096 / 0.5225</dd>
+            <dt>首 / 尾低能量区间</dt><dd>0.050 / 0.191 s</dd>
+            <dt>解码满幅样本数</dt><dd>0</dd></dl>
+            <a href="raw/T03_landing_preparation_raw.mp3" download>下载原始 MP3</a>
+            <details><summary>SHA-256</summary><code>7ef21e0a3fb6e5f6d044aed80967c53a7a4956452e8414dac8119e77421047a8</code></details></article></div>
+        <details><summary>查看实际波形与能量包络</summary><a href="T03_waveform_comparison.png"><img loading="lazy" src="T03_waveform_comparison.png" alt="T03 V3/V4 decoded waveform comparison"></a></details></section>
+    <section><h2>审计如何解释</h2><p>首尾区间定义为：使用不重叠 10 ms 窗，查找 RMS 超过 −50 dBFS 的首尾窗；它只是数字阈值估计，不等于词语、感知或实际扬声器声音的起止时间。</p>
+    <p>RMS 与 peak 来自 MATLAB 对实际 MP3 的解码样本；解码满幅样本为 |x| ≥ 1 的计数，0 不排除上游 clipping 或其他 codec 伪影。没有将相同数字电平当成响度匹配或耳侧校准。</p>
+    <p>试听重点：准确读出文案、三个 target 的同一说话人身份、句间停顿、自然语速、干净结尾、quiet/noise 中可懂度。当前是研究者有标签试听入口，尚未完成人类筛选、HMD 投送或完整 pilot。</p>
+    <p>本页没有自动播放或上传；播放新一条会暂停其他条目。</p></section>
+    <script>document.querySelectorAll('audio').forEach(a=>a.addEventListener('play',()=>document.querySelectorAll('audio').forEach(b=>{if(b!==a)b.pause()})));</script></html>

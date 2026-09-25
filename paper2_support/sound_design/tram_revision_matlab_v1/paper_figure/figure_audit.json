@@ -1,0 +1,88 @@
+{
+  "status": "author_selected_engineering_candidate_human_validation_pending",
+  "matlab_version": "24.2.0.3070828 (R2024b) Update 7",
+  "created_at_utc": "2026-09-23T10:42:07Z",
+  "plot_generator_sha256": "e573b468c06462d87abe66ea1254b7df6730b055f59c69226a10b46a5bcd8609",
+  "config": {
+    "file_duration_s": 1.8,
+    "sample_rate_hz": 44100,
+    "fft_window": "symmetric Hann over all 79380 samples",
+    "fft_nfft": 131072,
+    "stft_window": "symmetric Hann",
+    "stft_window_samples": 2048,
+    "stft_hop_samples": 256,
+    "stft_nfft": 4096,
+    "amplitude_reference": 1,
+    "normalization": "abs(FFT(x.*w))/sum(w); double interior one-sided bins only",
+    "db_formula": "20*log10(max(single_sided_amplitude,1e-6))",
+    "frequency_limits_hz": [
+      0,
+      1200
+    ],
+    "time_limits_s": [
+      0,
+      1.8
+    ],
+    "waveform_limits": [
+      -0.45,
+      0.45
+    ],
+    "fft_limits_db": [
+      -100,
+      0
+    ],
+    "stft_limits_db": [
+      -80,
+      -5
+    ],
+    "per_file_peak_normalization": false,
+    "window_zero_padding_note": "Zero padding samples the spectrum more densely; it does not increase intrinsic frequency resolution.",
+    "figure_width_mm": 190,
+    "figure_height_mm": 164
+  },
+  "sources": [
+    {
+      "target": "T01_cruise_entry",
+      "relative_path": "M1_two_pulse/T01_cruise_entry.wav",
+      "sha256": "e7974152d6d48bc27b6ab12a93dd7e2f057ecfc174f64f62bf67a985d4f74cf5",
+      "sample_rate_hz": 44100,
+      "samples": 79380,
+      "duration_s": 1.8,
+      "digital_rms": 0.15000004789019944,
+      "digital_peak": 0.22998046875,
+      "fft_peak_amplitude_db_re_1": -33.929953134303112,
+      "stft_peak_amplitude_db_re_1": -12.931990256593416,
+      "stft_frames": 303
+    },
+    {
+      "target": "T02_descent_begin",
+      "relative_path": "M1_two_pulse/T02_descent_begin.wav",
+      "sha256": "d24a28548dae311df70076bd4b5ea1876033aa0359e406d4b2911196d2dd90e7",
+      "sample_rate_hz": 44100,
+      "samples": 79380,
+      "duration_s": 1.8,
+      "digital_rms": 0.15000009105483375,
+      "digital_peak": 0.22998046875,
+      "fft_peak_amplitude_db_re_1": -33.929935243914485,
+      "stft_peak_amplitude_db_re_1": -12.932110816171889,
+      "stft_frames": 303
+    },
+    {
+      "target": "T03_landing_preparation",
+      "relative_path": "M1_two_pulse/T03_landing_preparation.wav",
+      "sha256": "68503a40e55a7ad874c499a6e6220eea08c1159063ff95d8a353114abb6fc979",
+      "sample_rate_hz": 44100,
+      "samples": 79380,
+      "duration_s": 1.8,
+      "digital_rms": 0.15000001392853188,
+      "digital_peak": 0.3927001953125,
+      "fft_peak_amplitude_db_re_1": -16.264759881513537,
+      "stft_peak_amplitude_db_re_1": -8.5291506452300165,
+      "stft_frames": 303
+    }
+  ],
+  "existing_wavs_unchanged": 9,
+  "pdf_sha256": "5ec3144c4735a6037c445f72051cd73d25700b09f0108d94b6e789dc0ad7d805",
+  "png_sha256": "abd8b1dee0778a840ca95bd443c2ca7abdb7835b3cc1309a2eab6712c7c019e4",
+  "boundary": "Signal structure only; no listener discrimination, urgency, loudness, or SPL inference."
+}

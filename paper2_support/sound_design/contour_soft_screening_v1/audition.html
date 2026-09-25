@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contour-soft candidate audition</title>
+  <style>
+    body { font: 16px/1.45 system-ui, sans-serif; margin: 2rem auto; max-width: 70rem; padding: 0 1rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #bbb; padding: .65rem; text-align: left; vertical-align: top; }
+    th { background: #f1f1f1; }
+    audio { width: 100%; min-width: 13rem; }
+    .boundary { background: #fff5d6; border-left: 4px solid #b87900; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Contour-soft candidate audition</h1>
+  <p class="boundary"><strong>Purpose:</strong> researcher audition only. These files have passed a digital-signal audit. This page does not provide calibrated playback, ear-side SPL, SNR, listener evidence, or a final stimulus decision.</p>
+  <p>Use the same playback device and nominal system volume for each comparison. Listen in random order where practical. Record the candidate ID, cue ID, playback chain, and observations in <code>researcher_audition_record.md</code>.</p>
+  <p><a href="identification.html">Open randomised cue identification check</a> — researcher QA, without route or phase-order cues.</p>
+  <table>
+    <thead><tr><th>Candidate</th><th>Single change</th><th>T01 cruise entry</th><th>T02 descent begin</th><th>T03 landing preparation</th></tr></thead>
+    <tbody>
+      <tr><td>C0</td><td>Current contour reference</td><td><audio controls src="C0_current_contour/T01_cruise_entry.wav"></audio></td><td><audio controls src="C0_current_contour/T02_descent_begin.wav"></audio></td><td><audio controls src="C0_current_contour/T03_landing_preparation.wav"></audio></td></tr>
+      <tr><td>C1</td><td>T03 late tick removed</td><td><audio controls src="C1_no_late_tick/T01_cruise_entry.wav"></audio></td><td><audio controls src="C1_no_late_tick/T02_descent_begin.wav"></audio></td><td><audio controls src="C1_no_late_tick/T03_landing_preparation.wav"></audio></td></tr>
+      <tr><td>C2</td><td>Second harmonic reduced</td><td><audio controls src="C2_reduced_harmonic/T01_cruise_entry.wav"></audio></td><td><audio controls src="C2_reduced_harmonic/T02_descent_begin.wav"></audio></td><td><audio controls src="C2_reduced_harmonic/T03_landing_preparation.wav"></audio></td></tr>
+      <tr><td>C3</td><td>Slower envelope</td><td><audio controls src="C3_smoother_envelope/T01_cruise_entry.wav"></audio></td><td><audio controls src="C3_smoother_envelope/T02_descent_begin.wav"></audio></td><td><audio controls src="C3_smoother_envelope/T03_landing_preparation.wav"></audio></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

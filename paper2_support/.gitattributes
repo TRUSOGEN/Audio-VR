@@ -1,0 +1,4 @@
+# This .mat is MATLAB binary data, unlike Unity material files in Assets/.
+*.mat binary
+*.csv -text
+*.cmd binary

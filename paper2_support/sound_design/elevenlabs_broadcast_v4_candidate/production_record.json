@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-23",
+  "provider": "ElevenLabs",
+  "model": "Eleven Multilingual v2",
+  "voice": "Paper2_AU_Female_Broadcast_V3",
+  "voice_id": "to2uGLddpS3srynUCVAr",
+  "speed_ui": 0.9,
+  "speed_filename": "sp89",
+  "stability": 0.5,
+  "similarity": 0.75,
+  "style": 0,
+  "speaker_boost": true,
+  "audio_effects": false,
+  "credits_before": 9361,
+  "credits_after": 9240,
+  "generation_attempts": 3,
+  "files": [
+    {
+      "target": "T01",
+      "text": "Flight update. We will enter cruise shortly.",
+      "provider_file": "ElevenLabs_2026-09-23T08_56_18_Paper2_AU_Female_Broadcast_V3_gen_sp89_s50_sb75_se0_b_m2.mp3",
+      "raw_file": "raw/T01_cruise_entry_raw.mp3",
+      "sha256": "55826f2aa42eb450f9ff3767c03883b7a2941583646057af326d67989308988b"
+    },
+    {
+      "target": "T02",
+      "text": "Flight update. Descent will begin shortly.",
+      "provider_file": "ElevenLabs_2026-09-23T09_00_30_Paper2_AU_Female_Broadcast_V3_gen_sp89_s50_sb75_se0_b_m2.mp3",
+      "raw_file": "raw/T02_descent_begin_raw.mp3",
+      "sha256": "7b355ff285e8023f9d67c1e9ea76e587525b0090e457c4bf8c5526ff3a486f2c"
+    },
+    {
+      "target": "T03",
+      "text": "Flight update. Prepare for landing.",
+      "provider_file": "ElevenLabs_2026-09-23T09_04_39_Paper2_AU_Female_Broadcast_V3_gen_sp89_s50_sb75_se0_b_m2.mp3",
+      "raw_file": "raw/T03_landing_preparation_raw.mp3",
+      "sha256": "7ef21e0a3fb6e5f6d044aed80967c53a7a4956452e8414dac8119e77421047a8"
+    }
+  ],
+  "status": "engineering_candidate_not_human_validated"
+}

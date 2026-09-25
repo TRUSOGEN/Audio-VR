@@ -1,0 +1,66 @@
+{
+  "generated_at_utc": "2026-09-18T10:07:24.635913+00:00",
+  "scope": "provider raw-export technical verification only",
+  "records": [
+    {
+      "filename": "T01_cruising_altitude_raw.mp3",
+      "sha256": "09cddda0a3555a7421c7e048144eefc412a2da47b97bcbffffe32ea356261e13",
+      "bytes": 54264,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "duration_s": 2.351,
+      "bit_rate_bps": 128000,
+      "peak_dBFS": null,
+      "rms_dBFS": null,
+      "leading_silence_s": null,
+      "trailing_silence_s": null,
+      "sample_measurements_status": "pending validated local MP3 decoder",
+      "format_checks": {
+        "mono": true,
+        "sample_rate_44100_hz": true,
+        "nonzero_duration": true,
+        "no_digital_clipping": null
+      }
+    },
+    {
+      "filename": "T02_descent_raw.mp3",
+      "sha256": "faa43a45ea4d2137f8246e93fc4d1fc95f2aa5a38c557ebe336eeeb4adc583a2",
+      "bytes": 56772,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "duration_s": 2.50775,
+      "bit_rate_bps": 128000,
+      "peak_dBFS": null,
+      "rms_dBFS": null,
+      "leading_silence_s": null,
+      "trailing_silence_s": null,
+      "sample_measurements_status": "pending validated local MP3 decoder",
+      "format_checks": {
+        "mono": true,
+        "sample_rate_44100_hz": true,
+        "nonzero_duration": true,
+        "no_digital_clipping": null
+      }
+    },
+    {
+      "filename": "T03_landing_raw.mp3",
+      "sha256": "a8350a46455f1aca41bc5b6a59214ac7cde2ff129af381326d41bb99c1c9950a",
+      "bytes": 50502,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "duration_s": 2.115875,
+      "bit_rate_bps": 128000,
+      "peak_dBFS": null,
+      "rms_dBFS": null,
+      "leading_silence_s": null,
+      "trailing_silence_s": null,
+      "sample_measurements_status": "pending validated local MP3 decoder",
+      "format_checks": {
+        "mono": true,
+        "sample_rate_44100_hz": true,
+        "nonzero_duration": true,
+        "no_digital_clipping": null
+      }
+    }
+  ]
+}

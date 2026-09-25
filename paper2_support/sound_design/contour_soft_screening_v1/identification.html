@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cue identification check</title>
+<style>
+body{font:17px/1.55 system-ui,sans-serif;color:#16302e;background:#f3f6f3;max-width:840px;margin:32px auto;padding:0 24px}h1{font-size:30px;margin-bottom:8px}section{background:white;padding:24px;border:1px solid #d5dfd9;border-radius:12px;margin:20px 0}label{display:block;margin:12px 0}select,input,button{font:inherit;padding:10px;border-radius:6px;border:1px solid #a4b9ad}button{background:#1b6051;color:white;cursor:pointer;margin:6px}button:disabled{opacity:.45;cursor:default}p{margin:10px 0}.note{font-size:14px;color:#53675e}.status{min-height:50px;font-weight:600}#answers{display:flex;flex-wrap:wrap}#error{color:#a12323}a{color:#1b6051}[hidden]{display:none!important}textarea{width:100%;height:150px;box-sizing:border-box}
+</style>
+<h1>Cue identification check</h1>
+<p>Learn the three sounds, then identify each sound without a flight scene or map.</p>
+<p class="note">Researcher QA tool. Quiet playback only; no headset calibration or main-study validation. Trial count and response window are provisional operator settings.</p>
+<section id="setup">
+<h2>Setup</h2>
+<label>Candidate <select id="family"><option value="C0_current_contour">C0 — current contour</option><option value="C1_no_late_tick">C1 — no late tick</option><option value="C2_reduced_harmonic">C2 — reduced harmonic</option><option value="C3_smoother_envelope">C3 — slower envelope</option></select></label>
+<label>Number of trials <input id="count" type="number" min="3" max="120" value="18"></label>
+<label>Response window (seconds) <input id="window" type="number" min="1" max="30" value="8"></label>
+<p>Use a comfortable volume. Each sound is sampled independently; repeats are allowed. No answer feedback appears during the check. Leave this tab visible.</p>
+<button id="load">Load sounds</button><p id="loadstate" role="status"></p>
+</section>
+<section id="training" hidden><h2>Learn the mapping</h2><p>You may replay these examples. This is familiarisation, not a validated learning criterion.</p><p id="trainingstatus" role="status">Play each example at least once.</p><div id="examples"></div><button id="start" disabled>Start identification</button></section>
+<section id="test" hidden><h2>Which transition does the sound mean?</h2><p id="status" class="status" role="status">Ready.</p><button id="play">Play next sound</button><div id="answers"></div><button id="abort">End check</button></section>
+<p id="error" role="alert"></p>
+<section id="finish" hidden><h2>Check ended</h2><p id="result"></p><button id="export">Download QA record</button><details><summary>Copy record if download is unavailable</summary><textarea id="record" readonly aria-label="QA record"></textarea></details><p>Reload this page to begin a new check. Saved records contain stimulus identities and software timestamps, not acoustic onset measurements.</p></section>
+<p class="note"><a href="audition.html">Back to labelled audition</a></p>
+<script type="module" src="identification_app.mjs"></script>
+</html>

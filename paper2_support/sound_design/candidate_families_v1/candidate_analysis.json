@@ -1,0 +1,125 @@
+{
+  "status": "digital_signal_audit_only",
+  "files": [
+    {
+      "file": "brightness/T01_cruise_entry.wav",
+      "sha256": "d4b4830e7c341fc932ee5b056c3637a47615b2f3b708e6b9653a0f3740fe6347",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.294983,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "brightness/T02_descent_begin.wav",
+      "sha256": "b65090e06141393157778643fd3d099dabc9765a3066f2bc1208f15e8270cd3b",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.31665,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "brightness/T03_landing_preparation.wav",
+      "sha256": "d1df1e15e11a5723d49e7085e3cda398b8a0ac41147e14a3293743a8e0819362",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.339508,
+      "rms_digital_amplitude": 0.149984
+    },
+    {
+      "file": "contour/T01_cruise_entry.wav",
+      "sha256": "f71ca54e29d8b37bccb78028c25883726baf53714dd24a006c586f92f459f63f",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.39386,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "contour/T02_descent_begin.wav",
+      "sha256": "ee0a447c77d27bfa98fe0eb42c3297216ca608225ebdd663fa3c14af81435dcd",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.364288,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "contour/T03_landing_preparation.wav",
+      "sha256": "fde8e8ffe2e5b7e9662f28d5e2a8f29813a9d91955f46110fc5d5306d333edd0",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.358459,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "interval/T01_cruise_entry.wav",
+      "sha256": "c5aab79a1cdbcf4dd2eab3ffbac3255cc4d45ac08af5259d9c0cd16409b0bb2f",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.331421,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "interval/T02_descent_begin.wav",
+      "sha256": "1880f874e749119eb9cc5928f65c3ee3dd50601c76b964cc77eac70fcc7fd7c2",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.331421,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "interval/T03_landing_preparation.wav",
+      "sha256": "9c293a8baa52eb270d3741eba281a87f9146ba198b9d24408d1187b362a54e33",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.302124,
+      "rms_digital_amplitude": 0.149983
+    },
+    {
+      "file": "rhythm/T01_cruise_entry.wav",
+      "sha256": "d4db66bc24b8d7e0786ccfece01e2c184542acab01634e41a4c68c43449397c3",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.687592,
+      "rms_digital_amplitude": 0.149989
+    },
+    {
+      "file": "rhythm/T02_descent_begin.wav",
+      "sha256": "72f9fc1f5e9d5714b21fd6caa27a016e59733cab23d04c0cba517398b7e4ad7c",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.600952,
+      "rms_digital_amplitude": 0.149987
+    },
+    {
+      "file": "rhythm/T03_landing_preparation.wav",
+      "sha256": "2f6596d739f374d187c2a280c64c6ae19dba166cf69b47aaaef9713dce375a9d",
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "duration_seconds": 1.35,
+      "peak_digital_amplitude": 0.482574,
+      "rms_digital_amplitude": 0.149985
+    }
+  ]
+}

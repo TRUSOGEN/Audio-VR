@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper #2 Sound-Family Audition</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; color: #17212b; background: #eef2f5; }
+    body { margin: 0; padding: 28px; }
+    main { max-width: 1080px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 26px; letter-spacing: 0; }
+    p { max-width: 850px; line-height: 1.5; }
+    .notice { border-left: 4px solid #b3541e; padding: 10px 14px; background: #fff7ed; }
+    table { border-collapse: collapse; width: 100%; margin-top: 22px; background: #fff; }
+    th, td { border: 1px solid #cbd5dc; padding: 12px; text-align: left; vertical-align: middle; }
+    th { background: #dce7ec; font-size: 14px; }
+    button { border: 1px solid #2f5660; background: #f8fafb; color: #17212b; padding: 8px 10px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    button:hover, button:focus { background: #cfe4e6; outline: 2px solid #315d68; outline-offset: 2px; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+    .family { font-weight: 700; text-transform: capitalize; }
+    .status { min-height: 24px; color: #285d42; font-weight: 700; }
+    @media (max-width: 720px) { body { padding: 14px; } th, td { padding: 8px; font-size: 13px; } button { padding: 7px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Paper #2: non-speech sound-family audition</h1>
+    <p class="notice">Development stimuli only. All files are digitally RMS-matched; this page does not establish playback level, acoustic calibration, or the final experimental family.</p>
+    <div class="controls">
+      <button type="button" data-family="contour">Play contour family</button>
+      <button type="button" data-family="interval">Play interval family</button>
+      <button type="button" data-family="rhythm">Play rhythm family</button>
+      <button type="button" data-family="brightness">Play brightness family</button>
+      <button type="button" id="stop">Stop</button>
+    </div>
+    <p id="status" class="status" aria-live="polite">Choose one family or one cue.</p>
+    <table>
+      <thead><tr><th>Family</th><th>Transition</th><th>Design distinction</th><th>Audition</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+  <script>
+    const cues = [
+      ['contour', 'T01', 'Cruise entry', 'Rising contour'], ['contour', 'T02', 'Descent begins', 'Falling contour'], ['contour', 'T03', 'Landing preparation', 'Two-stage rise + late tick'],
+      ['interval', 'T01', 'Cruise entry', 'Ascending interval'], ['interval', 'T02', 'Descent begins', 'Descending interval'], ['interval', 'T03', 'Landing preparation', 'Three-note ascending motif'],
+      ['rhythm', 'T01', 'Cruise entry', 'One pulse'], ['rhythm', 'T02', 'Descent begins', 'Two pulses'], ['rhythm', 'T03', 'Landing preparation', 'Three pulses'],
+      ['brightness', 'T01', 'Cruise entry', 'Darker harmonic balance'], ['brightness', 'T02', 'Descent begins', 'Medium brightness'], ['brightness', 'T03', 'Landing preparation', 'Brighter balance + late tick']
+    ];
+    const suffixes = { T01: 'cruise_entry', T02: 'descent_begin', T03: 'landing_preparation' };
+    const status = document.getElementById('status');
+    const audio = new Audio();
+    let runId = 0;
+    const play = async (family, target, invalidate = true) => {
+      if (invalidate) runId += 1;
+      const thisRun = runId;
+      audio.pause();
+      audio.currentTime = 0;
+      audio.src = `${family}/${target}_${suffixes[target]}.wav`;
+      status.textContent = `Playing ${family}: ${target}.`;
+      try { await audio.play(); } catch { status.textContent = 'Browser blocked playback. Use the cue button again after interacting with the page.'; return; }
+      audio.onended = () => { if (thisRun === runId) status.textContent = `Finished ${family}: ${target}.`; };
+    };
+    document.getElementById('rows').innerHTML = cues.map(([family, target, transition, distinction]) => `<tr><td class="family">${family}</td><td>${target}: ${transition}</td><td>${distinction}</td><td><button type="button" data-play="${family}" data-target="${target}">Play ${target}</button></td></tr>`).join('');
+    document.querySelectorAll('[data-play]').forEach(button => button.addEventListener('click', () => play(button.dataset.play, button.dataset.target)));
+    document.querySelectorAll('[data-family]').forEach(button => button.addEventListener('click', async () => {
+      const family = button.dataset.family;
+      const thisRun = ++runId;
+      for (const target of ['T01', 'T02', 'T03']) {
+        if (thisRun !== runId) return;
+        await play(family, target, false);
+        await new Promise(resolve => setTimeout(resolve, 1700));
+      }
+    }));
+    document.getElementById('stop').addEventListener('click', () => { runId += 1; audio.pause(); audio.currentTime = 0; status.textContent = 'Stopped.'; });
+  </script>
+</body>
+</html>

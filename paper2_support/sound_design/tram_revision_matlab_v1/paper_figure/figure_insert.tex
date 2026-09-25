@@ -1,0 +1,7 @@
+% Insert after the non-speech stimulus construction and design rationale.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/m1-waveform-fft-stft.pdf}
+    \caption{Acoustic structure of the M1 development candidate, measured from the exported WAV files in MATLAB. Rows show entering cruise, beginning descent, and preparing to land; columns show the waveform, whole-file FFT, and short-time spectrum. Waveform outlines show 5\,ms extrema. The rising and falling contours share a weak second harmonic; landing preparation uses two separated pulses at a fixed fundamental frequency. All files are 1.80\,s, mono, 44.1\,kHz, 16-bit PCM, with whole-file digital RMS approximately 0.15. FFT amplitudes use a symmetric Hann window and are divided by the window sum; interior one-sided bins are doubled. The whole-file FFT uses 131,072 points. The short-time analysis uses a 2,048-sample window, a 256-sample hop, and a 4,096-point FFT. All dB values refer to a sample amplitude of 1, with shared scales and no per-file peak normalisation. The figure describes signal structure, not perceived loudness, urgency, or identification performance.}
+    \label{fig:m1-acoustics}
+\end{figure}

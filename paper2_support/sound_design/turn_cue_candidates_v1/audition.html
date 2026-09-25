@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Turn cue candidates V1.1</title>
+  <style>
+    body { margin: 32px; max-width: 900px; background: #111b22; color: #e8f0f2; font: 16px system-ui, sans-serif; }
+    h1 { margin-bottom: 4px; } .note { color: #a9bec5; }
+    section { border-top: 1px solid #34505a; padding: 18px 0; }
+    button { margin: 4px 8px 4px 0; padding: 10px 14px; border: 1px solid #5e98a6; border-radius: 4px; color: #effbfc; background: #1b3943; cursor: pointer; }
+    button:hover { background: #285562; } .family { color: #83d6dd; }
+  </style>
+</head>
+<body>
+  <h1>左右转提示音候选 V1.1</h1>
+  <p class="note">同一 family 的左右文件内容相同，试听时的方向由浏览器声像位置模拟。</p>
+  <div id="app"></div>
+  <script>
+    const families = [
+      ['airy_glass', '空灵清亮'], ['airy_breath_soft', '新增：空灵呼吸柔和版'],
+      ['breath_chime', '轻呼吸感'], ['soft_bloom', '温和圆润'],
+      ['suspended_fifth', '稳定悬置音程']
+    ];
+    const app = document.getElementById('app');
+    for (const [id, label] of families) {
+      const section = document.createElement('section');
+      section.innerHTML = `<h2 class="family">${id} · ${label}</h2>`;
+      for (const side of ['left', 'right']) {
+        const button = document.createElement('button');
+        button.textContent = `${side === 'left' ? '左' : '右'}转试听`;
+        button.onclick = () => play(`${id}/turn_${side}.wav`, side === 'left' ? -0.8 : 0.8);
+        section.appendChild(button);
+      }
+      const centre = document.createElement('button');
+      centre.textContent = '中间参考';
+      centre.onclick = () => play(`${id}/turn_left.wav`, 0);
+      section.appendChild(centre);
+      app.appendChild(section);
+    }
+    async function play(path, pan) {
+      const context = new (window.AudioContext || window.webkitAudioContext)();
+      const response = await fetch(path);
+      const buffer = await context.decodeAudioData(await response.arrayBuffer());
+      const source = context.createBufferSource();
+      const panner = context.createStereoPanner();
+      source.buffer = buffer; panner.pan.value = pan;
+      source.connect(panner).connect(context.destination); source.start();
+      source.addEventListener('ended', () => context.close());
+    }
+  </script>
+</body>
+</html>
